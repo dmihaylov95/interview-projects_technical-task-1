@@ -1,0 +1,114 @@
+.hero {
+    height: 100vh;
+    background-image: url(../images/hero-1-bg.png), url(../images/hero-1-img.png);
+    background-position: bottom left, bottom right;
+    background-size: inherit;
+    background-repeat: no-repeat;
+}
+
+.carousel .card {
+    border: 1px solid #e5e2e2;
+}
+
+.carousel .card:hover {
+    border: none;
+    box-shadow: 1px 1px 8px #e7e7e7
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #4caf50ad;
+    width: 10px;
+}
+
+.carousel-indicators [data-bs-target].active {
+    background-color: #4caf50ad;
+    width: 20px;
+}
+
+/* section chat */
+.chat {
+    background-color: #f9f9fd;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.chatWrapper {
+    background-image: url(../images/chat.png);
+    background-position: bottom left, bottom right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+    .chatWrapper{
+        background-image: none;
+    }
+}
+
+.chat header {
+    margin-bottom: 40px;
+
+}
+
+.chat header h2 {
+    margin-bottom: 20px;
+}
+
+.services {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+services .card {
+    border: 1px solid #eaeaea;
+    transition: 0.3s;
+}
+
+.services .card:hover {
+    border: none;
+    box-shadow: 1px 1px 8px #e7e7e7;
+}
+
+.services .card:hover .actions {
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.services .card .card-title {
+    background-color: rgb(168, 82 , 168);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.services .card:hover .card-title {
+    background-color: transparent;
+    border: 1px solid black;
+    transition: 0.3s;
+}
+
+.services .card:hover .card-title {
+    stroke: black;
+}
+
+/* Accordion */
+
+.accordion-button::after {
+    flex-shrink: 0;
+    width: var(--bs-accordion-btn-icon-width);
+    height: var(--bs-accordion-btn-icon-width);
+    margin-left: auto;
+    content: "";
+    background-image: url(../images/icon-plus.png);
+    background-repeat: no-repeat;
+    background-size: var(--bs-accordion-btn-icon-width);
+    transition: var(--bs-accordion-btn-icon-transition);
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url(../images/icon-minus.png);
+    transform: var(--bs-accordion-btn-icon-transfrom);
+}
